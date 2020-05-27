@@ -6,5 +6,6 @@ urlpatterns = [
     path('', views.home),
     # other pages
     path('products/', views.products),
-    path('customer/', views.customer),
+    # <str:pk_tests>/ added this for dynamic url routing i.e we can find customer by id i.e /customer/4/
+    path('customer/<str:pk_test>/', views.customer),
 ]

@@ -30,11 +30,13 @@
                     <th>Customer</th>
                   
                     <th>Phone</th>
+                    <th>Information </th>
                 </tr>
                 {% for i in customers %}
                 <tr>
                 <td>{{ i.name }}</td>
                 <td>{{ i.phone }}</td>
+                <td><a href="{% url 'i' i.id %}">View</a></td>
                 </tr>
                 {% endfor %}
             </table>

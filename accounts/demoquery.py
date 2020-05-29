@@ -43,7 +43,7 @@ each time we load the customers profile
 ballOrders = firstCustomer.order_set.filter(product__name="Ball").count()
 
 #Returns total count for each product orderd
-allOrders = {}
+allOrders = {} #this is a dictionary
 
 for order in firstCustomer.order_set.all():
 	if order.product.name in allOrders:

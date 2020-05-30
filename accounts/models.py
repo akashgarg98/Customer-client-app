@@ -48,6 +48,7 @@ class Order(models.Model):
     # on_delete->when a order is delete then we instead of deleting the order we put null value to customer order 
     customer = models.ForeignKey(Customer,null=True, on_delete=models.SET_NULL)
     product = models.ForeignKey(Product,null=True, on_delete=models.SET_NULL)
-    
+    def __str__(self):
+        return self.product.name
     
    

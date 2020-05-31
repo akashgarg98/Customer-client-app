@@ -8,7 +8,7 @@ urlpatterns = [
     path('products/', views.products,name='products'),
     # <str:pk_tests>/ added this for dynamic url routing i.e we can find customer by id i.e /customer/4/
     path('customer/<str:pk_test>/', views.customer,name="i"),
-    path('create_order/', views.createOrder, name="create_order"),
+    path('create_order/<str:pk>/', views.createOrder, name="create_order"),
     path('update_order/<str:pk>/', views.updateOrder, name="update_order"),
-     path('delete_order/<str:pk>/', views.deleteOrder, name="delete_order"),
+    path('delete_order/<str:pk>/', views.deleteOrder, name="delete_order"),
 ]

@@ -7,6 +7,7 @@
         <div class="card card-body">
             <form action="" method='POST'>
                 {% csrf_token %}
+                {{ formset.management_form }}
             <!--{{formset}}  if we use this only then proper list wont be made-->
             {% for i in formset %}
                 {{i}}

@@ -44,6 +44,7 @@ class Order(models.Model):
 
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     status = models.CharField(max_length=300, null=True, choices=STATUS)
+    note = models.CharField(max_length=300, null=True)
     # one to many relationship for customer and product
     # on_delete->when a order is delete then we instead of deleting the order we put null value to customer order 
     customer = models.ForeignKey(Customer,null=True, on_delete=models.SET_NULL)
